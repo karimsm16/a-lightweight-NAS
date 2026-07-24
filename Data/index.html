@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang  ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> ESP32 NAS </title>
+         
+        <!-- Google Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+     <!--Lucide Icons -->
+        <script src="https://unpkg.com/lucide@latest/dist/lucide.js"></script>
+ 
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+<div class = "app">
+<!-- =========HEADER======== -->
+ <header class = "topbar">
+   <div class = "topbar-left">
+      </div class = "logo">
+         <i data-lucide = "hard-drive "></i>
+         <span> ESP32 NAS </span>
+      </div>
+    </div>
+    
+    <div class ="topbar-center" >
+      <div class ="search-box" >
+        <i data- lucide = "search"></i>
+        <input type = "text" placeholder = "Search files ..."> 
+      </div>
+
+    </div>
+
+  <div class="topbar right" >
+
+ </div class ="online  status">
+      <span class = "status dot " ></span>
+      <span>Online</span>
+      </div>
+
+  </div>
+ 
+ </header>
+
+
+ <!--===================== WORKSPACE ===================-->
+
+<div class = "workspace ">
+ 
+    <!----================SIDEBAR ========================---->
+ <aside class = "sidebar" >
+
+    <nay>
+        <ul>
+
+            <li class = "active " >  
+                <i data-lucide=""folder-open "></i>
+                <span> Files </span>
+            </li>
+
+            <li>
+                <i data-lucide="star"></i>
+                <span>Favorites</span>
+            </li>
+            <li>
+                 <i data-lucide="history"></i>
+                 <span> Activity</span>
+            </li>
+            <li>
+                <i data-lucide="network"></i>
+                <span>Network</span>
+            </li>
+            <li>
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+            </li>
+
+
+        </ul>
+
+    </nay>
+
+ </aside>
+
+
+
+ <!--=============================== Main  =======================-->
+ <main class ="main-content"> 
+
+    
+    <!-----=================== TOOLBAR ============----->
+    <section class = "toolbar" >
+    
+    <button class ="primary">
+    <i data-lucide=" UPLOAD  "></i>
+    UPLOAD 
+    </button>
+
+    <button>
+        <i data-lucide="folder-plus "></i>
+        FOLDER
+    </button>
+    
+    <button>
+        <i data-lucide="refresh-cw"></i>
+        Refresh
+    </button>
+    <button>
+        <i data-lucide="download"></i>
+        DOWNLOAD
+    </button>
+
+    <button>
+       <i data-lucide="pencil "></i>
+       RENAME 
+    </button>
+    <button class = "danger">
+      <i data-lucide="trash-2"></i>
+      DELETE
+    </button>
+
+
+</section>
+
+<!---=======================  BREADCRUMB  ======================================-->
+ 
+ <section class = "breadcrumb">
+     <a href= "#">Home</a>
+     <i data-lucide="chevron-right"></i>
+     <a href = "#" >Documents</a>
+     <i data-lucide="chevron-right "></i>
+     <span>Projects</span>
+
+ </section>
+
+ <!---==================== FILE EXPLORER ====================-->
+
+ <section class ="file -panel">
+
+    <table class = "file table ">
+        <thead>
+           <tr>
+
+                 <th></th>
+                 <th>Name</th>
+                 <th>Size</th>
+                 <th>Type</th>
+                 <th>Modified</th>
+
+           </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><i data-lucide="folder"></i></td>
+                <td> Pictures </td>
+                <td>-</td>
+                <td>Folder</td>
+                <td>Yesterday</td>
+            </tr>
+
+            <tr> 
+                <td><i data-lucide="file-text"></i></td>
+                <td>report.pdf</td>
+                <td> 3.2 MB </td>
+                <td>PDF</td>
+                <td>Today</td>
+
+            </tr>
+            <tr>
+                <td><i data-lucide="file-video"></i></td>
+                <td> movie.mp4 </td>
+                <td> 1.8 GB </td>
+                <td>Video</td>
+                <td> jul 18 </td>
+            </tr>
+
+        </tbody>
+    </table>
+ </section>
+
+ <!--=========================  DASHBOARD  ==========================-->
+ <section class = "dashboard-grid">
+   <div class = "card">
+     <h3>Storage</h3>
+      <div class = " progress bar ">
+
+        <div class = "progress-fill"></div>
+
+      </div>
+      <p>18/ 32 GB </p>
+
+    </div>
+
+ </section>
+ </main>
+</div>
+    </body>
+
+    <!--============================ FOOTER ===================================-->
+    <footer class = "statusbar">
+        <div>
+            <span class ="status-dot" ></span>
+            ONLINE
+        </div>
+        <div>
+          18 / 32 GB
+        </div>
+        <div>
+              1 Client
+        </div>
+        <div>
+            Firmware v1.0
+        </div>
+
+    </footer>
+    </div>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
