@@ -1,18 +1,18 @@
-#include <Arduino.h>
+#include "storage/SDManager.h"
 
-// put function declarations here:
-int myFunction(int, int);
+constexpr uint8_t SD_CS_PIN = 5;   // Change to your actual CS pin
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+SDManager sd;
+
+void setup()
+{
+  Serial.begin(115200);
+  SPI.begin();  // Initialize SPI bus
+    sd.begin(SD_CS_PIN);
+    Serial.println("SD Card Information:");
+    sd.printCardInfo();
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void loop()
+{
 }
