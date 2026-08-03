@@ -1,0 +1,800 @@
+
+
+/* Defines the global colors used throughout the interface. */
+
+:root{
+
+    --background: #0e1517;
+    --surface: #1e293b;
+    --surface-light: #334155;
+
+    --primary: #3b82f6;
+    --primary-hover: #2ceb25;
+
+    --success: #22c55e;
+    --danger: #ef4444;
+
+    --text: #f8fafc;
+    --text-secondary: #94a3b8;
+
+    --border: #475569;
+
+    --radius: 12px;
+
+}
+
+/* Styles the main page. */
+
+body{
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+}
+
+/* Main application container. */
+
+.app{
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100vh;
+
+}
+
+/* Top navigation bar. */
+
+.topbar{
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 28px;
+
+    background: var(--surface);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+/* Left section of the header. */
+
+.topbar-left{
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+/* Center section of the header. */
+
+.topbar-center{
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+/* Right section of the header. */
+
+.topbar-right{
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+/* Application logo. */
+
+.logo{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+.logo svg{
+
+    width: 28px;
+
+    height: 28px;
+
+    color: var(--primary);
+
+}
+
+/* Search box. */
+
+.search-box{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 360px;
+
+    background: var(--surface-light);
+
+    padding: 11px 15px;
+
+    border-radius: var(--radius);
+
+}
+
+.search-box svg{
+
+    color: var(--text-secondary);
+
+}
+
+.search-box input{
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+}
+
+.search-box input::placeholder{
+
+    color: var(--text-secondary);
+
+}
+
+/* Online status indicator. */
+
+.online-status{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-weight: 600;
+
+}
+
+.status-dot{
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--success);
+
+    box-shadow: 0 0 8px var(--success);
+
+}
+
+/* Main workspace. */
+
+.workspace{
+
+    display: flex;
+
+    flex: 1;
+
+}
+
+/* Left navigation menu. */
+
+.sidebar{
+
+    width: 240px;
+
+    background: var(--surface);
+
+    border-right: 1px solid var(--border);
+
+    padding: 24px 14px;
+
+}
+
+.sidebar ul{
+
+    list-style: none;
+
+}
+
+.sidebar li{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px 16px;
+
+    margin-bottom: 8px;
+
+    border-radius: var(--radius);
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+.sidebar li:hover{
+
+    background: var(--surface-light);
+
+}
+
+.sidebar li.active{
+
+    background: var(--primary);
+
+}
+
+.sidebar svg{
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+/* Main content area. */
+
+.main-content{
+
+    flex: 1;
+
+    padding: 28px;
+
+}
+
+/* Toolbar. */
+
+.toolbar{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+}
+
+/* Toolbar buttons. */
+
+.toolbar button{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: var(--radius);
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+.toolbar button:hover{
+
+    background: var(--surface-light);
+
+    transform: translateY(-2px);
+
+}
+
+/* Upload button. */
+
+.toolbar .primary{
+
+    background: var(--primary);
+
+}
+
+.toolbar .primary:hover{
+
+    background: var(--primary-hover);
+
+}
+
+/* Delete button. */
+
+.toolbar .danger{
+
+    background: var(--danger);
+
+}
+
+/* Breadcrumb navigation. */
+
+.breadcrumb{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+
+    color: var(--text-secondary);
+
+}
+
+.breadcrumb a{
+
+    text-decoration: none;
+
+    color: var(--text-secondary);
+
+}
+
+.breadcrumb a:hover{
+
+    color: var(--primary);
+
+}
+/* File explorer panel. */
+
+.file-panel{
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    margin-bottom: 24px;
+
+}
+
+/* File table. */
+
+.file-table{
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+/* Table header. */
+
+.file-table thead{
+
+    background: var(--surface-light);
+
+}
+
+.file-table th{
+
+    text-align: left;
+
+    padding: 16px;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+/* Table rows. */
+
+.file-table td{
+
+    padding: 16px;
+
+    border-top: 1px solid var(--border);
+
+    transition: .2s;
+
+}
+
+.file-table tbody tr{
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+.file-table tbody tr:hover{
+
+    background: rgba(59,130,246,.12);
+
+}
+
+.file-table tbody tr:active{
+
+    background: rgba(59,130,246,.20);
+
+}
+
+/* File icons. */
+
+.file-table svg{
+
+    width:20px;
+
+    height:20px;
+
+    color: var(--primary);
+
+}
+
+/* Dashboard section. */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+
+}
+
+/* Dashboard card. */
+
+.card{
+
+    background: var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding:22px;
+
+}
+
+.card h3{
+
+    margin-bottom:18px;
+
+    font-size:18px;
+
+}
+
+/* Progress bar. */
+
+.progress-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background: var(--surface-light);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-bottom:14px;
+
+}
+
+/* Storage usage. */
+
+.progress-fill{
+
+    width:56%;
+
+    height:100%;
+
+    background: linear-gradient(
+        90deg,
+        #3b82f6,
+        #60a5fa
+    );
+
+    border-radius:999px;
+
+}
+
+/* Card text. */
+
+.card p{
+
+    color:var(--text-secondary);
+
+    font-size:15px;
+
+}
+
+/* Footer. */
+
+.statusbar{
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    background:var(--surface);
+
+    border-top:1px solid var(--border);
+
+    color:var(--text-secondary);
+
+    font-size:14px;
+
+}
+
+.statusbar div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+/* Footer online indicator. */
+
+.statusbar .status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--success);
+
+    box-shadow:0 0 8px var(--success);
+
+}
+
+/* Scrollbar. */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--background);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--surface-light);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#64748b;
+
+}
+
+/* Simple fade animation. */
+
+.card,
+.file-panel,
+.toolbar button{
+
+    animation:fadeIn .4s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+
+    }
+
+}
+
+/* Responsive layout. */
+
+@media (max-width:900px){
+
+    .topbar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        gap:16px;
+
+        padding:18px;
+
+    }
+
+    .search-box{
+
+        width:100%;
+
+    }
+
+    .workspace{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        width:100%;
+
+        border-right:none;
+
+        border-bottom:1px solid var(--border);
+
+    }
+
+    .toolbar{}
+
+    .statusbar{
+
+        flex-wrap:wrap;
+
+          justify-content:center;
+      height:auto;
+
+        padding:12px;
+
+        gap:12px;
+
+    }
+
+}
+/* page system */
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+.info-table{
+    width:100%;
+    border-collapse:collapse;
+}
+.info-table td{
+    padding :14px;
+    border-bottom:1px solid var(--border);
+
+}
+.info-table td:first-child{
+    width:200px;
+    color:var(--text-secondary);
+    font-weight:600;
+}
+#page-settings button{
+
+    padding :12px 18px ;
+    margin:8px;
+    border:none;
+    border-radius:var(--radius);
+
+    background:var(--primary);
+    color: white;
+
+    cursor:pointer ;
+    transition:.2s;
+
+}
+#page-settings button:hover{
+    background:var(--primary-hover);
+}
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+/* ===========================
+   File Explorer
+=========================== */
+
+#file-list tr{
+    cursor:pointer;
+    transition:0.2s;
+}
+
+#file-list tr:hover{
+    background:#2b2f36;
+}
+
+#breadcrumb{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+#breadcrumb a{
+    color:var(--primary);
+    text-decoration:none;
+    cursor:pointer;
+}
+
+#breadcrumb a:hover{
+    text-decoration:underline;
+}
+
+#btn-back{
+    margin-right:10px;
+}

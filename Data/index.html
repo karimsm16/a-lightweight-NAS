@@ -24,23 +24,23 @@
 <!-- =========HEADER======== -->
  <header class = "topbar">
    <div class = "topbar-left">
-      </div class = "logo">
-         <i data-lucide = "hard-drive "></i>
+      <div class = "logo">
+         <i data-lucide = "hard-drive"></i>
          <span> ESP32 NAS </span>
       </div>
     </div>
     
     <div class ="topbar-center" >
       <div class ="search-box" >
-        <i data- lucide = "search"></i>
+        <i data-lucide = "search"></i>
         <input type = "text" placeholder = "Search files ..."> 
       </div>
 
     </div>
 
-  <div class="topbar right" >
+  <div class="topbar-right" >
 
- </div class ="online  status">
+ <div class ="online-status">
       <span class = "status dot " ></span>
       <span>Online</span>
       </div>
@@ -57,27 +57,19 @@
     <!----================SIDEBAR ========================---->
  <aside class = "sidebar" >
 
-    <nay>
+    <nav>
         <ul>
 
-            <li class = "active " >  
-                <i data-lucide=""folder-open "></i>
+            <li id ="nav-files" class = "active">
+                <i data-lucide="folder-open"></i>
                 <span> Files </span>
             </li>
-
-            <li>
-                <i data-lucide="star"></i>
-                <span>Favorites</span>
-            </li>
-            <li>
-                 <i data-lucide="history"></i>
-                 <span> Activity</span>
-            </li>
-            <li>
+                
+            <li id ="nav-network">
                 <i data-lucide="network"></i>
                 <span>Network</span>
             </li>
-            <li>
+            <li id ="nav-settings">
                 <i data-lucide="settings"></i>
                 <span>Settings</span>
             </li>
@@ -85,7 +77,7 @@
 
         </ul>
 
-    </nay>
+    </nav>
 
  </aside>
 
@@ -94,34 +86,40 @@
  <!--=============================== Main  =======================-->
  <main class ="main-content"> 
 
+    <section id="page-files" class ="page active">
     
     <!-----=================== TOOLBAR ============----->
     <section class = "toolbar" >
     
-    <button class ="primary">
-    <i data-lucide=" UPLOAD  "></i>
-    UPLOAD 
+    <button id="btn-upload" class="primary">
+    <i data-lucide="Upload"></i>
+    Upload
     </button>
 
-    <button>
-        <i data-lucide="folder-plus "></i>
-        FOLDER
+    <button id ="btn-folder">
+        <i data-lucide="folder-plus"></i>
+        Folder
     </button>
-    
-    <button>
+
+    <button id="btn-back">
+    <i data-lucide="arrow-left"></i>
+    Back
+</button>
+
+    <button id="btn-refresh">
         <i data-lucide="refresh-cw"></i>
         Refresh
     </button>
-    <button>
+    <button id ="btn-download">
         <i data-lucide="download"></i>
-        DOWNLOAD
+        Download
     </button>
 
-    <button>
-       <i data-lucide="pencil "></i>
-       RENAME 
+    <button id="btn-rename">
+       <i data-lucide="pencil"></i>
+       Rename
     </button>
-    <button class = "danger">
+    <button id="btn-delete" class = "danger">
       <i data-lucide="trash-2"></i>
       DELETE
     </button>
@@ -131,20 +129,20 @@
 
 <!---=======================  BREADCRUMB  ======================================-->
  
- <section class = "breadcrumb">
+ <section class="breadcrumb" id="breadcrumb">
      <a href= "#">Home</a>
      <i data-lucide="chevron-right"></i>
      <a href = "#" >Documents</a>
-     <i data-lucide="chevron-right "></i>
+     <i data-lucide="chevron-right"></i>
      <span>Projects</span>
 
  </section>
 
  <!---==================== FILE EXPLORER ====================-->
 
- <section class ="file -panel">
+ <section class ="file-panel">
 
-    <table class = "file table ">
+    <table class = "file-table ">
         <thead>
            <tr>
 
@@ -156,31 +154,8 @@
 
            </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td><i data-lucide="folder"></i></td>
-                <td> Pictures </td>
-                <td>-</td>
-                <td>Folder</td>
-                <td>Yesterday</td>
-            </tr>
-
-            <tr> 
-                <td><i data-lucide="file-text"></i></td>
-                <td>report.pdf</td>
-                <td> 3.2 MB </td>
-                <td>PDF</td>
-                <td>Today</td>
-
-            </tr>
-            <tr>
-                <td><i data-lucide="file-video"></i></td>
-                <td> movie.mp4 </td>
-                <td> 1.8 GB </td>
-                <td>Video</td>
-                <td> jul 18 </td>
-            </tr>
-
+        <tbody id="file-list">
+           
         </tbody>
     </table>
  </section>
@@ -189,28 +164,87 @@
  <section class = "dashboard-grid">
    <div class = "card">
      <h3>Storage</h3>
-      <div class = " progress bar ">
+      <div class = "progress-bar">
 
         <div class = "progress-fill"></div>
 
       </div>
-      <p>18/ 32 GB </p>
+      <p id="storage-text">Loading... </p>
 
     </div>
 
- </section>
+   </section>
+</section>
+<!--===================Network page ==========================-->
+<section id = "page-network" class="page" >
+    <h2>Network</h2>
+
+    <div class = "card">
+        <table class ="info-table">
+            <tr>
+                <td>Status</td>
+                <td id ="network-status">Loading...</td>
+
+            </tr>
+
+            <tr>
+                <td>SSID</td>
+                <td id ="network-ssid">Loading...</td>
+                
+            </tr>
+            <tr>
+                <td>IP Address</td>
+                <td id ="network-ip">Loading...</td>
+            </tr>
+            <tr>
+                <td>Signal</td>
+                <td id ="network-signal">Loading...</td>
+            </tr>
+            <tr>
+                <td>MAC Address</td>
+                <td id ="network-mac">Loading...</td>
+            </tr>
+            <tr>
+                <td>Gateway</td>
+                <td id ="network-gateway">Loading...</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<!--===================Settings page ==========================-->
+<section id = "page-settings" class = "page" > 
+    <h2>Settings</h2>
+    <div class ="card">
+        <button>Restart ESP32</button>
+        <button> Restart Server</button>
+        <button> Format SD Card</button>
+
+    </div>
+
+    <div class = "card">
+        <h3>System</h3>
+        <p>Firmware : v1.0</p>
+        <P>Device: ESP32 NAS</P>
+    </div>
+</section>
+
+
+
+
+
  </main>
 </div>
-    </body>
+    
 
     <!--============================ FOOTER ===================================-->
     <footer class = "statusbar">
         <div>
-            <span class ="status-dot" ></span>
+            <span class = "status-dot"></span>
             ONLINE
         </div>
-        <div>
-          18 / 32 GB
+        <div id="footer-storage">
+          Loading
         </div>
         <div>
               1 Client
@@ -219,12 +253,11 @@
             Firmware v1.0
         </div>
 
-    </footer>
-    </div>
+     </footer>
+ </div>
 
-<script>
-    lucide.createIcons();
-</script>
+
+<script src="script.js"></script>
 
 </body>
 </html>

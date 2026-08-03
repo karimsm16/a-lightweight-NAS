@@ -76,9 +76,10 @@ bool SDManager::begin(uint8_t csPin)
      Serial.println("ERROR: SD card initialization failed ");
     
     }
+    else
      Serial.println(" SUCCESS : SD card initialized ") ;
     
-    return true ;
+return true ;
 
 }
 
@@ -340,11 +341,11 @@ void SDManager:: printCardInfo() const
         (double)freeBytes() / (1024.0 * 1024.0 * 1024.0);
 
         Serial.print("TOTAL: ");
-        Serial.println(totalGB,2);
+        Serial.print(totalGB,2);
         Serial.println("GB");
 
         Serial.print("USED  :");
-        Serial.println(usedGB,2);
+        Serial.print(usedGB,2);
         Serial.println("GB");
 
         Serial.print("FREE :");
