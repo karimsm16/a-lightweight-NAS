@@ -41,7 +41,7 @@ This project allows you to manage files stored on an SD card directly from your 
 
 ### Wiring Diagram
 
-![ESP32 NAS Wiring Diagram](./esp32NAS.pdf)
+[ESP32 NAS Wiring Diagram](./esp32NAS.pdf)
 
 
 
