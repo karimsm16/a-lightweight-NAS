@@ -24,8 +24,8 @@ This project allows you to manage files stored on an SD card directly from your 
   - No software installation required
 
 -  Lightweight and fast
-  - Runs entirely on an ESP32
-  - Low memory footprint
+   - Runs entirely on an ESP32
+   - Low memory footprint
 
 
 
@@ -36,6 +36,12 @@ This project allows you to manage files stored on an SD card directly from your 
 - ESP32 Development Board
 - Micro SD Card Module
 - Micro SD Card
+
+**[View Bill of Materials (BOM)](./bom.csv)**
+
+### Wiring Diagram
+
+![ESP32 NAS Wiring Diagram](./esp32NAS.pdf)
 
 
 
@@ -74,14 +80,8 @@ git clone https://github.com/karimsm16/a-lightweight-NAS.git
 
 ## Why this project?
 
-The goal of this project is to build a lightweight NAS using inexpensive hardware and to abriviate the proccess of  opening , and reopening your phone slot and searching a USB card adapter just to copy some files to your card memory from your lapto
+The goal of this project is to build a lightweight NAS using inexpensive hardware and to abriviate the proccess of  opening , and reopening your phone slot and searching a USB card adapter just to transfer files.
 
 
 ## Demo video :
 [Click here to watch the project demo](https://drive.google.com/file/d/15h1bdfyv1-6w5vuqf7vd_GTKVhY_gMv8/view?usp=sharing)
-
-
-
-
-
-
