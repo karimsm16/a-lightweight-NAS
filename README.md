@@ -41,7 +41,7 @@ This project allows you to manage files stored on an SD card directly from your 
 
 ### Wiring Diagram
 
-[ESP32 NAS Wiring Diagram](./esp32NAS.pdf)
+[ESP32 NAS Wiring Diagram](./esp32-NAS.png_bb.png)
 
 
 
@@ -85,4 +85,4 @@ The goal of this project is to build a lightweight NAS using inexpensive hardwar
 
 
 ## Demo video :
-[Click here to watch the project demo](https://www.reddit.com/r/Hack_Club/s/YwXyj9Ul7r)
+[Click here to watch the project demo](https://youtu.be/0M4kWjUGIP0?si=2nhAqq3r0DrqPyVO)
