@@ -45,6 +45,7 @@ This project allows you to manage files stored on an SD card directly from your 
 
 
 
+
 ---
 
 ## Software
@@ -84,4 +85,4 @@ The goal of this project is to build a lightweight NAS using inexpensive hardwar
 
 
 ## Demo video :
-[Click here to watch the project demo](https://drive.google.com/file/d/15h1bdfyv1-6w5vuqf7vd_GTKVhY_gMv8/view?usp=sharing)
+[Click here to watch the project demo](https://www.reddit.com/r/Hack_Club/s/YwXyj9Ul7r)
