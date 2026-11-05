@@ -1,8 +1,5 @@
-Item,Quantity,Component,Product URL,Listed price (USD)
-1,1,ESP32 development board - Adafruit HUZZAH32 ESP32 Feather,https://www.adafruit.com/product/3405,19.95
-2,1,MicroSD SPI/SDIO card breakout board - Adafruit,https://www.adafruit.com/product/254,7.50
-3,1,32GB SanDisk Ultra microSDHC UHS-I card,https://www.amazon.com/SanDisk-Ultra-microSDHC-Adapter-SDSQUAR-032G-GN6MA/dp/B073JWXGNT,5.59
-4,4 wires (purchase 1 pack of 40),Adafruit premium male/male jumper wires (40-pack),https://www.adafruit.com/product/759,3.95
-
-Total listed purchase cost (one of each listed product; before tax/shipping),36.99
-Prices are a snapshot and may change; jumper-wire price is for the 40-wire pack.
+Item,Quantity,Component
+1,1,ESP32 Microcontroller ($19.95) https://www.adafruit.com/product/3405
+2,1,SD Card Module ($7.50) https://www.adafruit.com/product/254
+3,1,microSD Card ($5.59) https://www.amazon.com/SanDisk-Ultra-microSDHC-Adapter-SDSQUAR-032G-GN6MA/dp/B073JWXGNT
+4,4,Jumper Wires ($3.95 for a 40-wire pack) https://www.adafruit.com/product/759
