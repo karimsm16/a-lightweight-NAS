@@ -1,5 +1,6 @@
+Bill of Materials
 Item,Quantity,Component
-1,1,ESP32 Microcontroller ($19.95) https://www.adafruit.com/product/3405
-2,1,SD Card Module ($7.50) https://www.adafruit.com/product/254
-3,1,microSD Card ($5.59) https://www.amazon.com/SanDisk-Ultra-microSDHC-Adapter-SDSQUAR-032G-GN6MA/dp/B073JWXGNT
-4,4,Jumper Wires ($3.95 for a 40-wire pack) https://www.adafruit.com/product/759
+1,1,"ESP32 Microcontroller — $19.95 — https://www.adafruit.com/product/3405"
+2,1,"SD Card Module — $7.50 — https://www.adafruit.com/product/254"
+3,1,"microSD Card — $5.59 — https://www.amazon.com/SanDisk-Ultra-microSDHC-Adapter-SDSQUAR-032G-GN6MA/dp/B073JWXGNT"
+4,4,"Jumper Wires — $3.95 for a 40-wire pack — https://www.adafruit.com/product/759"
